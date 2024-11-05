@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6961327F2CAC0C3A00D798E0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6961327E2CAC0C3A00D798E0 /* Alamofire */; };
+		696132842CAC0C5B00D798E0 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 696132832CAC0C5B00D798E0 /* SwiftyJSON */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		690109492C9FF4D50066792E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				696132842CAC0C5B00D798E0 /* SwiftyJSON in Frameworks */,
+				6961327F2CAC0C3A00D798E0 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = ExplainMe;
 			packageProductDependencies = (
+				6961327E2CAC0C3A00D798E0 /* Alamofire */,
+				696132832CAC0C5B00D798E0 /* SwiftyJSON */,
 			);
 			productName = ExplainMe;
 			productReference = 690109382C9FF4D40066792E /* ExplainMe.app */;
@@ -195,6 +204,10 @@
 			);
 			mainGroup = 6901092F2C9FF4D40066792E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6961327D2CAC0C3A00D798E0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				696132822CAC0C5B00D798E0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 690109392C9FF4D40066792E /* Products */;
 			projectDirPath = "";
@@ -404,6 +417,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -433,6 +447,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,6 +573,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6961327D2CAC0C3A00D798E0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		696132822CAC0C5B00D798E0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6961327E2CAC0C3A00D798E0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6961327D2CAC0C3A00D798E0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		696132832CAC0C5B00D798E0 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 696132822CAC0C5B00D798E0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 690109302C9FF4D40066792E /* Project object */;
 }

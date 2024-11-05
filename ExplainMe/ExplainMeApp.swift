@@ -9,9 +9,25 @@ import SwiftUI
 
 @main
 struct ExplainMeApp: App {
+    
+    @State var isActive = false
+    @StateObject var sharedData = SharedData()
+   
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isActive{
+                ContentView()
+                    .environmentObject(sharedData)
+                    
+            }
+            else{
+                LunchScreen()
+                    .onAppear{
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0){
+                            self.isActive = true
+                        }
+                    }
+            }
         }
     }
 }

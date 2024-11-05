@@ -8,14 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+   
+    @AppStorage("selectedTab") var selectedTab : Tab = .home
+    @StateObject var sharedData = SharedData()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack (alignment: .bottom){
+            switch selectedTab {
+                
+            case .home:
+                HomeView()
+                
+            case .profile:
+                ProfileView()
+                
+            case .projects:
+                ProjectsView()
+            }
+            
+            TabBar()
         }
-        .padding()
+        .safeAreaInset(edge: .bottom) {
+            Color.clear.frame(height: 44)
+        }
+       // .preferredColorScheme(sharedData.mode) // Apply the color scheme based on sharedData.mode
     }
 }
 
